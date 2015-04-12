@@ -4,8 +4,20 @@
 
 {% block content %}
 
-  <h1></h1>
+  <h1 class="heading--primary">{{ global.name }}</h1>
+  {{ global.intro|markdown }}
 
-  <p></p>
+  <!-- TODO: Pulling out an array index feels wrong -->
+  {% set data = cms.clientlogos[0] %}
+  
+  <h2>Career</h2>
+  <p>A selection of clients and agencies that I am proud to have done work for:</p>
+  <ul class="clients">
+    {% for logos in data.logos %}
+      <li class="client">
+        <img src="{{ logos.logo|imageSize(200, 200) }}" alt="{{logos.client_name}}" class="client--logo">
+      </li>
+    {% endfor %}
+  </ul>
 
 {% endblock %}
