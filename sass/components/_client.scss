@@ -1,0 +1,23 @@
+.clients {
+    @extend %wrapping-list;
+    width: 100%;
+}
+
+.client {
+    width: 100px;
+    padding: 10px;
+
+    @include min-screen(850px) { 
+		padding: 10px 30px;
+	}
+}
+
+@include min-screen(700px) { 
+    .client {
+    	width: 150px;
+    }
+}
+
+.client--logo {
+    width: 100%;
+}

@@ -1,5 +1,15 @@
-.heading--primary {
-    font-family: 'TextaNarrow-Thin', Helvetica, Arial, Sans-Serif;
-    font-size: 45px;
-    text-transform: uppercase;  
-}
+/* Base */
+@import 'reset';
+@import 'normalize';
+@import 'mixins';
+@import 'patterns';
+
+/* Vars */
+
+
+/* Fonts and Layout */
+@import 'typography';
+@import 'layout';
+
+/* Components */
+@import 'components';
